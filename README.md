@@ -7,11 +7,11 @@ This repository follows a structured organisation and consistent file naming con
 
 ### Folder structure
 
-- data/        → Input datasets (raw and processed)
-- src/         → Source code and scripts
-- outputs/     → Generated outputs (figures, models, results)
-- docs/        → Documentation and reports
-- configs/     → Configuration files
+- **data/** → Input datasets (raw and processed)  
+- **src/** → Source code and scripts  
+- **outputs/** → Generated outputs (figures, models, results)  
+- **docs/** → Documentation and reports  
+- **configs/** → Configuration files  
 
 ---
 
@@ -19,54 +19,54 @@ This repository follows a structured organisation and consistent file naming con
 
 #### 1. Input datasets (data/)
 
-Format:
-<source>_<dataset-name>_<version>.<extension>
+Format:  
+`<source>_<dataset-name>_<version>.<extension>`
 
-Example:
-kaggle_housing_v1.csv
+Example:  
+`kaggle_housing_v1.csv`
 
 ---
 
 #### 2. Output files (outputs/)
 
-Figures:
-fig_<description>_<date>.png
+Figures:  
+`fig_<description>_<date>.png`
 
-Example:
-fig_accuracy_2026-05-05.png
+Example:  
+`fig_accuracy_2026-05-05.png`
 
-Model artefacts:
-model_<algorithm>_<dataset>_<version>.pkl
+Model artefacts:  
+`model_<algorithm>_<dataset>_<version>.pkl`
 
-Example:
-model_randomforest_housing_v1.pkl
+Example:  
+`model_randomforest_housing_v1.pkl`
 
 ---
 
 #### 3. Scripts (src/)
 
-Format:
-<step-number>_<description>.py
+Format:  
+`<step-number>_<description>.py`
 
-Example:
-01_data_preprocessing.py
-02_model_training.py
+Example:  
+`01_data_preprocessing.py`  
+`02_model_training.py`
 
 ---
 
 #### 4. Configuration files (configs/)
 
-Format:
-config_<purpose>.yaml
+Format:  
+`config_<purpose>.yaml`
 
-Example:
-config_training.yaml
+Example:  
+`config_training.yaml`
 
 ---
 
 ### General rules
 
-- Use lowercase letters only
-- Use underscores (_) instead of spaces
-- Include version numbers where applicable
-- Use ISO date format: YYYY-MM-DD
+- Use lowercase letters only  
+- Use underscores (_) instead of spaces  
+- Include version numbers where applicable  
+- Use ISO date format: YYYY-MM-DD  

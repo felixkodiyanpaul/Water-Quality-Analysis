@@ -1,7 +1,7 @@
 # Water-quality-analysis-fair-ml
 FAIR Data Science experiment project
 
-## Project overview
+## Project Overview
 
 This project implements a FAIR Data Science workflow to analyse environmental water quality indicators using an open dataset from the European Open Data Portal.
 

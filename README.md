@@ -1,4 +1,4 @@
-# water-quality-analysis-fair-ml
+# Water-quality-analysis-fair-ml
 FAIR Data Science experiment project
 
 ## Project overview

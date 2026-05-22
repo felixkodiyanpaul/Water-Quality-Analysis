@@ -184,3 +184,23 @@ This naming convention is applied consistently across all files in the repositor
 ## Status
 
 Initial project setup completed (WP1).  
+
+## Database (DBRepo)
+
+The input data is stored in DBRepo as a relational database 
+in Third Normal Form (3NF) with 4 tables:
+
+- **lake** — 346 unique lakes with region
+- **sampling_station** — 355 monitoring stations
+- **sampling_event** — 1,935 sampling visits
+- **water_quality_measurement** — 1,935 measurement rows
+
+DBRepo URL: https://test.dbrepo.tuwien.ac.at/database/13457a52-37f9-48d4-a078-6865e8d35981/table
+
+Source dataset: National Lakes Monitoring Data  
+Publisher: Aplinkos apsaugos agentūra  
+Source: https://data.europa.eu  
+License: Open Data Licence of Lithuania  
+Schema: see data/schema.sql  
+ER Diagram: see docs/er_diagram.png  
+Notebook: see src/T2_1_schema(1).ipynb

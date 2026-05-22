@@ -1,0 +1,34 @@
+Table lake {
+  lake_id     int [pk, increment]
+  lake_name   varchar(200) [not null]
+  region      varchar(100) [not null]
+}
+
+Table sampling_station {
+  station_id    int [pk, increment]
+  station_code  varchar(50) [not null, unique]
+  station_name  varchar(200) [not null]
+  coord_x       float
+  coord_y       float
+  lake_id       int [not null, ref: > lake.lake_id]
+}
+
+Table sampling_event {
+  event_id    int [pk, increment]
+  station_id  int [not null, ref: > sampling_station.station_id]
+  sampled_on  date [not null]
+}
+
+Table water_quality_measurement {
+  measurement_id        int [pk, increment]
+  event_id              int [not null, ref: - sampling_event.event_id]
+  water_temperature_c   float
+  ph                    float
+  dissolved_oxygen_mg_l float
+  conductivity_us_cm    float
+  total_nitrogen_mg_l   float
+  total_phosphorus_mg_l float
+  chlorophyll_a_ug_l    float
+  mercury_ug_l          float
+  lead_ug_l             float
+}

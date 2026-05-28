@@ -1,0 +1,141 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "qudt": "http://qudt.org/vocab/unit/"
+  },
+  "@type": "Dataset",
+  "name": "National Lake Monitoring Data - Lithuania",
+  "description": "Water quality monitoring dataset from Lithuanian lakes containing physicochemical measurements and pollutant concentrations for 1935 sampling events across 386 monitoring stations.",
+  "url": "https://github.com/felixkodiyanpaul/Water-Quality-Analysis",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": {
+    "@type": "Organization",
+    "name": "Aplinkos apsaugos agentūra",
+    "url": "https://aaa.lrv.lt"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Valstybės duomenų agentūra",
+    "url": "https://data.gov.lt"
+  },
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "name": "Lakes_Monitoring.csv",
+      "contentUrl": "https://github.com/felixkodiyanpaul/Water-Quality-Analysis/blob/main/src/Lakes_Monitoring.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "9d0bcdd81b3dec1593aeae4d984279033d7685a0e4ee84263c6353b886f3b52f"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "name": "water_quality_measurements",
+      "description": "Core water quality measurements per sampling event",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "name": "vandens_temp",
+          "description": "Water temperature",
+          "dataType": "float",
+          "unit": "qudt:DEG_C"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "ph",
+          "description": "pH value (acidity)",
+          "dataType": "float",
+          "unit": "qudt:PH"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "deguonis_istirpes",
+          "description": "Dissolved oxygen",
+          "dataType": "float",
+          "unit": "qudt:MilliGM-PER-L"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "elektr_laidis",
+          "description": "Electrical conductivity",
+          "dataType": "float",
+          "unit": "qudt:MicroS-PER-CentiM"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "biochem_deg_suvartojimas",
+          "description": "Biochemical oxygen demand (BOD)",
+          "dataType": "float",
+          "unit": "qudt:MilliGM-PER-L"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "skaidrumas",
+          "description": "Water transparency (Secchi depth)",
+          "dataType": "float",
+          "unit": "qudt:M"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "chlorofilas_a",
+          "description": "Chlorophyll-a concentration",
+          "dataType": "float",
+          "unit": "qudt:MicroGM-PER-L"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "azotas_bendras",
+          "description": "Total nitrogen",
+          "dataType": "float",
+          "unit": "qudt:MilliGM-PER-L"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "fosforas_bendras",
+          "description": "Total phosphorus",
+          "dataType": "float",
+          "unit": "qudt:MilliGM-PER-L"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "gyvsidabris",
+          "description": "Mercury concentration",
+          "dataType": "float",
+          "unit": "qudt:MicroGM-PER-L"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "kadmis",
+          "description": "Cadmium concentration",
+          "dataType": "float",
+          "unit": "qudt:MicroGM-PER-L"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "telkinio_pav",
+          "description": "Lake name",
+          "dataType": "string"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "regionas",
+          "description": "Administrative region in Lithuania",
+          "dataType": "string"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "m_vietos_kodas",
+          "description": "Monitoring station code",
+          "dataType": "string"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "data",
+          "description": "Sampling date",
+          "dataType": "date"
+        }
+      ]
+    }
+  ]
+}

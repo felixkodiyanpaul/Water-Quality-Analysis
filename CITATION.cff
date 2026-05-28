@@ -37,3 +37,7 @@ keywords:
   - Lithuania
   - FAIR data
   - DBRepo
+references:
+  - type: dataset
+    title: "Generated Outputs – Water Quality Classification Using National Lake Monitoring Data"
+    doi: 10.70124/htsbq-tkj76

@@ -204,3 +204,31 @@ License: Open Data Licence of Lithuania
 Schema: see data/schema.sql  
 ER Diagram: see docs/er_diagram.png  
 Notebook: see src/T2_1_schema(1).ipynb
+
+---
+
+## Licences
+
+This project involves three categories of artefacts, each with a separate licence.
+
+### Input Data
+The input dataset is the **National Lake Monitoring Data** from Lithuania, 
+published by Aplinkos apsaugos agentūra (Lithuanian Environmental Protection Agency) 
+on the European Open Data Portal. It is licensed under **Creative Commons Attribution 4.0 
+International (CC BY 4.0)**. Our intended use — analysis, classification, and academic 
+reporting — is permitted under this licence. CC BY 4.0 requires attribution but does not 
+impose ShareAlike obligations, meaning our output data and models are not required to use 
+the same licence.
+
+### Software / Code
+The source code in this repository is licensed under the **MIT Licence** (see `LICENSE` file).
+MIT was chosen because it is a permissive open-source licence that is fully compatible with 
+the CC BY 4.0 input data licence — it imposes no ShareAlike restrictions and allows free use, 
+modification, and distribution. Dependencies are listed in `requirements.txt` and mirrored 
+in `codemeta.json` under `softwareRequirements`.
+
+### Output Data (Models, Figures, Predictions)
+All produced outputs — trained ML models, evaluation figures, confusion matrices, and 
+classification results — are licensed under **Creative Commons Attribution 4.0 International 
+(CC BY 4.0)**. This licence is compatible with the input data licence and ensures outputs 
+remain openly accessible while requiring attribution.

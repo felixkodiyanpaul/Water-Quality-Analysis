@@ -214,11 +214,11 @@ This project involves three categories of artefacts, each with a separate licenc
 ### Input Data
 The input dataset is the **National Lake Monitoring Data** from Lithuania, 
 published by Aplinkos apsaugos agentūra (Lithuanian Environmental Protection Agency) 
-on the European Open Data Portal. It is licensed under **Creative Commons Attribution 4.0 
-International (CC BY 4.0)**. Our intended use — analysis, classification, and academic 
-reporting — is permitted under this licence. CC BY 4.0 requires attribution but does not 
-impose ShareAlike obligations, meaning our output data and models are not required to use 
-the same licence.
+on the European Open Data Portal. It is licensed under the **Open Data Licence of 
+Lithuania**, which permits free reuse including for research and academic purposes. 
+This licence does not impose ShareAlike obligations, meaning our output data and models 
+are not required to use the same licence. For metadata purposes, CC BY 4.0 is used as 
+the closest equivalent open licence.
 
 ### Software / Code
 The source code in this repository is licensed under the **MIT Licence** (see `LICENSE` file).

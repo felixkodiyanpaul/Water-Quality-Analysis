@@ -1,0 +1,101 @@
+{
+  "@context": "https://w3id.org/fair4ml/context.json",
+  "@type": "MLModel",
+  "name": "Water Quality Classification Model – Lithuanian Lake Monitoring",
+  "version": "3.0.0",
+  "description": "Random Forest Classifier trained to predict water quality class (Good/Moderate/Poor) of Lithuanian lakes based on 11 physicochemical measurements. Trained on National Lakes Monitoring Data provided by Aplinkos apsaugos agentūra. Achieves 91.9% accuracy. Developed for TU Wien Data Stewardship course 194.045, 2026S.",
+  "dateCreated": "2026-05-07",
+  "dateModified": "2026-05-29",
+  "license": "https://spdx.org/licenses/MIT.html",
+  "codeRepository": "https://github.com/felixkodiyanpaul/Water-Quality-Analysis",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Rajeevan, Anusree",
+      "affiliation": "TU Wien",
+      "@id": "https://orcid.org/0009-0006-9044-3017"
+    },
+    {
+      "@type": "Person",
+      "name": "Varghese Johnson, Joel",
+      "affiliation": "TU Wien",
+      "@id": "https://orcid.org/0009-0007-0154-9707"
+    },
+    {
+      "@type": "Person",
+      "name": "Kodiyan Paul, Felix Antony",
+      "affiliation": "TU Wien",
+      "@id": "https://orcid.org/0009-0001-2323-0517"
+    },
+    {
+      "@type": "Person",
+      "name": "Varughese Mathew, Ashwin",
+      "affiliation": "TU Wien",
+      "@id": "https://orcid.org/0009-0002-1797-1869"
+    }
+  ],
+  "algorithm": {
+    "@type": "MLAlgorithm",
+    "name": "Random Forest Classifier",
+    "library": "scikit-learn",
+    "libraryVersion": "1.4.0"
+  },
+  "hyperparameters": {
+    "n_estimators": 100,
+    "max_depth": null,
+    "min_samples_split": 2,
+    "min_samples_leaf": 1,
+    "random_state": 42,
+    "class_weight": "balanced"
+  },
+  "trainingData": {
+    "@type": "Dataset",
+    "name": "National Lakes Monitoring Data – Lithuania",
+    "description": "Physicochemical measurements of Lithuanian lakes including pH, dissolved oxygen, conductivity, turbidity, and nutrient levels. Sourced from Aplinkos apsaugos agentūra via DBRepo.",
+    "url": "https://test.dbrepo.tuwien.ac.at/database/13457a52-37f9-48d4-a078-6865e8d35981/table",
+    "license": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "evaluationMetrics": {
+    "accuracy": 0.919,
+    "weightedPrecision": "see confusion matrix",
+    "weightedRecall": "see confusion matrix",
+    "weightedF1": "see confusion matrix",
+    "evaluationDataset": "20% stratified test split of training data"
+  },
+  "intendedUse": "Predict water quality classification (Good/Moderate/Poor) for Lithuanian lakes based on physicochemical measurements. Intended for academic research and educational purposes as part of TU Wien Data Stewardship course 194.045.",
+  "outOfScopeUse": "Not intended for production environmental monitoring, regulatory decisions, or application to lakes outside Lithuania without retraining. Not validated for real-time or streaming data.",
+  "limitations": "Model trained exclusively on Lithuanian lake data; generalisation to other geographic regions is not guaranteed. Performance may degrade on lakes with physicochemical profiles outside the training distribution.",
+  "relatedResources": [
+    {
+      "relation": "isSupplementedBy",
+      "identifier": "https://github.com/felixkodiyanpaul/Water-Quality-Analysis",
+      "resourceType": "Software"
+    },
+    {
+      "relation": "isDerivedFrom",
+      "identifier": "https://test.dbrepo.tuwien.ac.at/database/13457a52-37f9-48d4-a078-6865e8d35981/table",
+      "resourceType": "Dataset"
+    },
+    {
+      "relation": "isSupplementedBy",
+      "identifier": "10.70124/0c7z5-7vm19",
+      "scheme": "DOI",
+      "resourceType": "Model",
+      "description": "TUWRD model deposit (T3.9)"
+    },
+    {
+      "relation": "isSupplementedBy",
+      "identifier": "10.70124/htsbq-tkj76",
+      "scheme": "DOI",
+      "resourceType": "Dataset",
+      "description": "TUWRD generated outputs deposit (T3.10)"
+    },
+    {
+      "relation": "isSupplementedBy",
+      "identifier": "ZENODO_DOI_PLACEHOLDER",
+      "scheme": "DOI",
+      "resourceType": "Software",
+      "description": "Zenodo v3.0 release — replace with actual DOI after Felix creates the release"
+    }
+  ]
+}

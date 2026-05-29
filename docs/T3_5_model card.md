@@ -79,7 +79,7 @@ distributed via the European Union Open Data Portal.
 - **Publisher:** Aplinkos apsaugos agentūra
 - **License:** Open Data Licence of Lithuania
 - **Records:** 1,935 total — 1,548 training (80%) / 387 test (20%)
-- **DOI:** To be added after TUWRD deposit
+- **DOI:** 10.70124/0c7z5-7vm19
 
 The dataset contains physicochemical measurements from 
 307 Lithuanian lakes sampled between 2017 and 2022 at 

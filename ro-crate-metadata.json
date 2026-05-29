@@ -1,0 +1,388 @@
+
+{
+  "@context": "https://w3id.org/ro/crate/1.1/context",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "@id": "ro-crate-metadata.json",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "@id": "./",
+      "name": "Water Quality Analysis Using National Lake Monitoring Data",
+      "description": "A FAIR Data Science experiment classifying Lithuanian lake water quality (Good/Moderate/Poor) using a Random Forest model trained on 11 physicochemical measurements. Data is loaded exclusively from the DBRepo REST API. Developed for TU Wien Data Stewardship course 194.045, 2026S.",
+      "version": "3.0.0",
+      "datePublished": "2026-05-29",
+      "license": {
+        "@id": "https://spdx.org/licenses/MIT.html"
+      },
+      "identifier": "https://doi.org/10.5281/zenodo.20444106",
+      "url": "https://github.com/felixkodiyanpaul/Water-Quality-Analysis",
+      "author": [
+        {
+          "@id": "https://orcid.org/0009-0006-9044-3017"
+        },
+        {
+          "@id": "https://orcid.org/0009-0007-0154-9707"
+        },
+        {
+          "@id": "https://orcid.org/0009-0001-2323-0517"
+        },
+        {
+          "@id": "https://orcid.org/0009-0002-1797-1869"
+        }
+      ],
+      "hasPart": [
+        {
+          "@id": "notebooks/T2_6_dbrepo_api_version.ipynb"
+        },
+        {
+          "@id": "notebooks/experiment_csv_version.ipynb"
+        },
+        {
+          "@id": "notebooks/T2_1_schema.ipynb"
+        },
+        {
+          "@id": "notebooks/T2_2_semantic_mapping.ipynb"
+        },
+        {
+          "@id": "notebooks/T2_3_unit_mapping.ipynb"
+        },
+        {
+          "@id": "notebooks/T2_4_views.ipynb"
+        },
+        {
+          "@id": "notebooks/T2_5_load_verify.ipynb"
+        },
+        {
+          "@id": "outputs/water_quality_model.pkl"
+        },
+        {
+          "@id": "outputs/label_encoder.pkl"
+        },
+        {
+          "@id": "outputs/confusion_matrix_api.png"
+        },
+        {
+          "@id": "outputs/predictions_api.csv"
+        },
+        {
+          "@id": "data/Lakes_Monitoring.csv"
+        },
+        {
+          "@id": "docs/model-card.md"
+        },
+        {
+          "@id": "docs/T3_11_standards_overlap_analysis.md"
+        },
+        {
+          "@id": "codemeta.json"
+        },
+        {
+          "@id": "croissant.json"
+        },
+        {
+          "@id": "fair4ml.json"
+        },
+        {
+          "@id": "CITATION.cff"
+        },
+        {
+          "@id": "LICENSE"
+        },
+        {
+          "@id": "requirements.txt"
+        }
+      ],
+      "isBasedOn": {
+        "@id": "https://test.dbrepo.tuwien.ac.at/database/13457a52-37f9-48d4-a078-6865e8d35981/table"
+      },
+      "relatedLink": [
+        {
+          "@id": "https://doi.org/10.70124/0c7z5-7vm19"
+        },
+        {
+          "@id": "https://doi.org/10.70124/htsbq-tkj76"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0006-9044-3017",
+      "name": "Anusree Rajeevan",
+      "affiliation": {
+        "@id": "https://ror.org/04d836q62"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0007-0154-9707",
+      "name": "Joel Varghese Johnson",
+      "affiliation": {
+        "@id": "https://ror.org/04d836q62"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0001-2323-0517",
+      "name": "Felix Antony Kodiyan Paul",
+      "affiliation": {
+        "@id": "https://ror.org/04d836q62"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0002-1797-1869",
+      "name": "Ashwin Varughese Mathew",
+      "affiliation": {
+        "@id": "https://ror.org/04d836q62"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://ror.org/04d836q62",
+      "name": "TU Wien"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "notebooks/T2_6_dbrepo_api_version.ipynb",
+      "name": "ML Experiment – DBRepo API Version",
+      "description": "Random Forest classifier trained via DBRepo REST API. Fully FAIR-compliant, no local data files required.",
+      "programmingLanguage": "Python",
+      "author": {
+        "@id": "https://orcid.org/0009-0007-0154-9707"
+      },
+      "license": {
+        "@id": "https://spdx.org/licenses/MIT.html"
+      }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "notebooks/experiment_csv_version.ipynb",
+      "name": "ML Experiment – CSV Version",
+      "description": "Original Random Forest classifier trained from local CSV file.",
+      "programmingLanguage": "Python",
+      "author": {
+        "@id": "https://orcid.org/0009-0007-0154-9707"
+      },
+      "license": {
+        "@id": "https://spdx.org/licenses/MIT.html"
+      }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "notebooks/T2_1_schema.ipynb",
+      "name": "DBRepo Schema Creation",
+      "programmingLanguage": "Python",
+      "author": {
+        "@id": "https://orcid.org/0009-0006-9044-3017"
+      },
+      "license": {
+        "@id": "https://spdx.org/licenses/MIT.html"
+      }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "notebooks/T2_2_semantic_mapping.ipynb",
+      "name": "Ontology Semantic Mapping",
+      "programmingLanguage": "Python",
+      "author": {
+        "@id": "https://orcid.org/0009-0007-0154-9707"
+      },
+      "license": {
+        "@id": "https://spdx.org/licenses/MIT.html"
+      }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "notebooks/T2_3_unit_mapping.ipynb",
+      "name": "Unit of Measurement Mapping",
+      "programmingLanguage": "Python",
+      "author": {
+        "@id": "https://orcid.org/0009-0001-2323-0517"
+      },
+      "license": {
+        "@id": "https://spdx.org/licenses/MIT.html"
+      }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "notebooks/T2_4_views.ipynb",
+      "name": "DBRepo View Definitions",
+      "programmingLanguage": "Python",
+      "author": {
+        "@id": "https://orcid.org/0009-0002-1797-1869"
+      },
+      "license": {
+        "@id": "https://spdx.org/licenses/MIT.html"
+      }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "notebooks/T2_5_load_verify.ipynb",
+      "name": "Data Loading and Verification",
+      "programmingLanguage": "Python",
+      "author": {
+        "@id": "https://orcid.org/0009-0001-2323-0517"
+      },
+      "license": {
+        "@id": "https://spdx.org/licenses/MIT.html"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "@id": "data/Lakes_Monitoring.csv",
+      "name": "National Lakes Monitoring Data",
+      "description": "Physicochemical measurements of Lithuanian lakes. Published by Aplinkos apsaugos agentūra via the European Open Data Portal.",
+      "license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "url": "https://data.europa.eu"
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://test.dbrepo.tuwien.ac.at/database/13457a52-37f9-48d4-a078-6865e8d35981/table",
+      "name": "National Lakes Monitoring Data – DBRepo",
+      "description": "Normalised relational database of Lithuanian lake physicochemical measurements stored in DBRepo.",
+      "license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    },
+    {
+      "@type": "MediaObject",
+      "@id": "outputs/water_quality_model.pkl",
+      "name": "Trained Random Forest Model",
+      "description": "Serialised scikit-learn Random Forest classifier for water quality prediction.",
+      "encodingFormat": "application/octet-stream",
+      "license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "identifier": "https://doi.org/10.70124/0c7z5-7vm19"
+    },
+    {
+      "@type": "MediaObject",
+      "@id": "outputs/label_encoder.pkl",
+      "name": "Label Encoder",
+      "description": "Sklearn LabelEncoder for target water quality classes.",
+      "encodingFormat": "application/octet-stream",
+      "license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "outputs/confusion_matrix_api.png",
+      "name": "Confusion Matrix – API Version",
+      "description": "Confusion matrix from the DBRepo API version of the ML experiment.",
+      "encodingFormat": "image/png",
+      "license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "identifier": "https://doi.org/10.70124/htsbq-tkj76"
+    },
+    {
+      "@type": "Dataset",
+      "@id": "outputs/predictions_api.csv",
+      "name": "Predictions – API Version",
+      "description": "Model predictions on the test set from the DBRepo API version.",
+      "encodingFormat": "text/csv",
+      "license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "identifier": "https://doi.org/10.70124/htsbq-tkj76"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "docs/model-card.md",
+      "name": "Model Card",
+      "description": "Model card describing the Random Forest classifier including intended use, evaluation results, and limitations.",
+      "author": {
+        "@id": "https://orcid.org/0009-0006-9044-3017"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "docs/T3_11_standards_overlap_analysis.md",
+      "name": "Metadata Standards Overlap Analysis",
+      "description": "Analysis of overlap between RO-Crate, CodeMeta, FAIR4ML, Croissant, and Model Card metadata standards.",
+      "author": {
+        "@id": "https://orcid.org/0009-0001-2323-0517"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "codemeta.json",
+      "name": "CodeMeta Metadata",
+      "description": "CodeMeta 2.0 software metadata record.",
+      "author": {
+        "@id": "https://orcid.org/0009-0007-0154-9707"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "croissant.json",
+      "name": "Croissant JSON-LD Metadata",
+      "description": "Croissant metadata record for the input dataset.",
+      "author": {
+        "@id": "https://orcid.org/0009-0002-1797-1869"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "fair4ml.json",
+      "name": "FAIR4ML Metadata",
+      "description": "FAIR4ML metadata record for the Random Forest model.",
+      "author": {
+        "@id": "https://orcid.org/0009-0001-2323-0517"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "CITATION.cff",
+      "name": "Citation File Format",
+      "description": "CFF citation metadata for the software repository.",
+      "author": {
+        "@id": "https://orcid.org/0009-0002-1797-1869"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "LICENSE",
+      "name": "MIT License",
+      "description": "MIT open source licence for the software code.",
+      "license": {
+        "@id": "https://spdx.org/licenses/MIT.html"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://doi.org/10.70124/0c7z5-7vm19",
+      "name": "Water Quality Classification Model – TUWRD Deposit (T3.9)",
+      "description": "TUWRD deposit of the trained Random Forest model."
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://doi.org/10.70124/htsbq-tkj76",
+      "name": "Generated Outputs – Water Quality Classification (T3.10)",
+      "description": "TUWRD deposit of generated outputs including predictions and evaluation figures."
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://spdx.org/licenses/MIT.html",
+      "name": "MIT License",
+      "identifier": "MIT"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://creativecommons.org/licenses/by/4.0/",
+      "name": "Creative Commons Attribution 4.0 International",
+      "identifier": "CC-BY-4.0"
+    }
+  ]
+}

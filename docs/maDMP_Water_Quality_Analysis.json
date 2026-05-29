@@ -1,0 +1,275 @@
+{
+  "dmp": {
+    "title": "DMP: Water Quality Analysis Using National Lake Monitoring Data",
+    "description": "Data Management Plan for a machine learning-based water quality classification experiment using national lake monitoring data from Lithuania.",
+    "language": "eng",
+    "created": "2026-05-29T00:00:00Z",
+    "modified": "2026-05-29T00:00:00Z",
+    "dmp_id": {
+      "identifier": "LAKEWATER-2026-DMP",
+      "type": "other"
+    },
+    "contact": {
+      "contact_id": {
+        "identifier": "https://orcid.org/0009-0001-2323-0517",
+        "type": "orcid"
+      },
+      "mbox": "e12436485@student.tuwien.ac.at",
+      "name": "Felix Antony Kodiyan Paul"
+    },
+    "contributor": [
+      {
+        "contributor_id": {
+          "identifier": "https://orcid.org/0009-0002-1797-1869",
+          "type": "orcid"
+        },
+        "mbox": "e12538359@student.tuwien.ac.at",
+        "name": "Ashwin Varughese Mathew",
+        "role": [
+          "Researcher"
+        ]
+      },
+      {
+        "contributor_id": {
+          "identifier": "https://orcid.org/0009-0001-2323-0517",
+          "type": "orcid"
+        },
+        "mbox": "e12436485@student.tuwien.ac.at",
+        "name": "Felix Antony Kodiyan Paul",
+        "role": [
+          "Researcher",
+          "Data Manager"
+        ]
+      },
+      {
+        "contributor_id": {
+          "identifier": "https://orcid.org/0009-0006-9044-3017",
+          "type": "orcid"
+        },
+        "mbox": "e12534814@student.tuwien.ac.at",
+        "name": "Anusree Rajeevan",
+        "role": [
+          "Researcher"
+        ]
+      },
+      {
+        "contributor_id": {
+          "identifier": "https://orcid.org/0009-0007-0154-9707",
+          "type": "orcid"
+        },
+        "mbox": "e12534758@student.tuwien.ac.at",
+        "name": "Joel Varghese Johnson",
+        "role": [
+          "Researcher"
+        ]
+      }
+    ],
+    "cost": [],
+    "ethical_issues_exist": "no",
+    "ethical_issues_description": "No ethical issues are foreseen. The data used is publicly available environmental monitoring data with no personal or sensitive information.",
+    "ethical_issues_report": "N/A",
+    "project": [
+      {
+        "title": "Water Quality Analysis Using National Lake Monitoring Data",
+        "description": "Machine learning-based water quality classification using national lake monitoring data from Lithuania, published by Aplinkos apsaugos agentūra and obtained from the European Open Data Portal (data.europa.eu). The dataset contains 1,935 records and 116 variables covering physicochemical parameters, heavy metals, and priority pollutants. The experiment implements a fully FAIR open-science pipeline with structured data storage in DBRepo, standards-compliant metadata (RO-Crate, CodeMeta, FAIR4ML, Croissant, Model Card), and all artefacts published with persistent identifiers on GitHub, Zenodo, and TU Wien Research Data Repository.",
+        "start": "2026-05-01",
+        "end": "2026-05-30",
+        "funding": []
+      }
+    ],
+    "dataset": [
+      {
+        "title": "National Lakes Monitoring Data",
+        "description": "Physicochemical measurements of Lithuanian lakes published by Aplinkos apsaugos agentūra via the European Open Data Portal. Accessed via DBRepo REST API.",
+        "type": "dataset",
+        "language": "eng",
+        "personal_data": "no",
+        "sensitive_data": "no",
+        "data_quality_assurance": [
+          "standardised data capture",
+          "data entry validation",
+          "representation with controlled vocabularies"
+        ],
+        "keyword": [
+          "water quality",
+          "lake monitoring",
+          "Lithuania",
+          "physicochemical",
+          "open data"
+        ],
+        "issued": "2026-05-01",
+        "security_and_privacy": [],
+        "technical_resource": [],
+        "distribution": [
+          {
+            "title": "National Lakes Monitoring Data – DBRepo",
+            "description": "Physicochemical measurements of Lithuanian lakes accessed via DBRepo REST API.",
+            "data_access": "open",
+            "access_url": "https://test.dbrepo.tuwien.ac.at/database/13457a52-37f9-48d4-a078-6865e8d35981/table",
+            "format": [
+              "text/csv"
+            ],
+            "byte_size": 500000,
+            "license": [
+              {
+                "license_ref": "https://creativecommons.org/licenses/by/4.0/",
+                "start_date": "2026-05-01"
+              }
+            ],
+            "host": {
+              "title": "DBRepo – TU Wien",
+              "url": "https://test.dbrepo.tuwien.ac.at",
+              "description": "DBRepo is a research data repository for structured relational data at TU Wien.",
+              "storage_type": "institutional",
+              "pid_system": [
+                "doi"
+              ],
+              "support_versioning": "yes",
+              "backup_frequency": "daily"
+            }
+          }
+        ]
+      },
+      {
+        "title": "Water Quality Classification Model",
+        "description": "Random Forest Classifier trained to predict water quality class (Good/Moderate/Poor) of Lithuanian lakes based on 11 physicochemical measurements. Achieves 91.9% accuracy. Serialised as water_quality_model.pkl.",
+        "type": "model",
+        "language": "eng",
+        "personal_data": "no",
+        "sensitive_data": "no",
+        "dataset_id": {
+          "identifier": "https://doi.org/10.70124/0c7z5-7vm19",
+          "type": "doi"
+        },
+        "data_quality_assurance": [
+          "standardised data capture",
+          "data entry validation"
+        ],
+        "keyword": [
+          "random forest",
+          "machine learning",
+          "water quality",
+          "classification",
+          "scikit-learn"
+        ],
+        "issued": "2026-05-29",
+        "security_and_privacy": [],
+        "technical_resource": [],
+        "distribution": [
+          {
+            "title": "Water Quality Classification Model – TUWRD",
+            "description": "Trained Random Forest model deposited on TU Wien Research Data Repository.",
+            "data_access": "open",
+            "access_url": "https://doi.org/10.70124/0c7z5-7vm19",
+            "format": [
+              "application/octet-stream"
+            ],
+            "byte_size": 100000000,
+            "available_until": "2036-05-30",
+            "license": [
+              {
+                "license_ref": "https://opensource.org/license/mit",
+                "start_date": "2026-05-30"
+              }
+            ],
+            "host": {
+              "title": "TU Wien Research Data",
+              "url": "https://researchdata.tuwien.ac.at/",
+              "description": "TU Wien Research Data is an institutional repository of TU Wien.",
+              "storage_type": "institutional",
+              "pid_system": [
+                "doi"
+              ],
+              "support_versioning": "yes",
+              "backup_frequency": "daily"
+            }
+          },
+          {
+            "title": "Water Quality Classification Model – GitHub/Zenodo",
+            "description": "Source code and model archived on Zenodo via GitHub integration.",
+            "data_access": "open",
+            "access_url": "https://doi.org/10.5281/zenodo.20444106",
+            "format": [
+              "application/zip"
+            ],
+            "byte_size": 100000000,
+            "license": [
+              {
+                "license_ref": "https://opensource.org/license/mit",
+                "start_date": "2026-05-29"
+              }
+            ],
+            "host": {
+              "title": "Zenodo",
+              "url": "https://zenodo.org",
+              "description": "Zenodo is a general-purpose open-access repository developed under the European OpenAIRE program.",
+              "storage_type": "repository",
+              "pid_system": [
+                "doi"
+              ],
+              "support_versioning": "yes",
+              "backup_frequency": "daily"
+            }
+          }
+        ]
+      },
+      {
+        "title": "Generated Outputs – Water Quality Classification",
+        "description": "Predictions, confusion matrix, label encoder and evaluation figures generated by the Random Forest classifier on the Lithuanian lakes test set.",
+        "type": "dataset",
+        "language": "eng",
+        "personal_data": "no",
+        "sensitive_data": "no",
+        "dataset_id": {
+          "identifier": "https://doi.org/10.70124/htsbq-tkj76",
+          "type": "doi"
+        },
+        "data_quality_assurance": [
+          "standardised data capture",
+          "data entry validation"
+        ],
+        "keyword": [
+          "predictions",
+          "confusion matrix",
+          "evaluation metrics",
+          "water quality",
+          "random forest"
+        ],
+        "issued": "2026-05-29",
+        "security_and_privacy": [],
+        "technical_resource": [],
+        "distribution": [
+          {
+            "title": "Generated Outputs – TUWRD",
+            "description": "Generated outputs deposited on TU Wien Research Data Repository.",
+            "data_access": "open",
+            "access_url": "https://doi.org/10.70124/htsbq-tkj76",
+            "format": [
+              "text/csv",
+              "image/png"
+            ],
+            "byte_size": 100000000,
+            "available_until": "2036-05-30",
+            "license": [
+              {
+                "license_ref": "https://creativecommons.org/licenses/by/4.0/",
+                "start_date": "2026-05-30"
+              }
+            ],
+            "host": {
+              "title": "TU Wien Research Data",
+              "url": "https://researchdata.tuwien.ac.at/",
+              "description": "TU Wien Research Data is an institutional repository of TU Wien.",
+              "storage_type": "institutional",
+              "pid_system": [
+                "doi"
+              ],
+              "support_versioning": "yes",
+              "backup_frequency": "daily"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

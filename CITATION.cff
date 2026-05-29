@@ -81,5 +81,8 @@ keywords:
   - DBRepo
 references:
   - type: dataset
-    title: "Generated Outputs – Water Quality Classification Using National Lake Monitoring Data"
+    title: "Generated Outputs - Water Quality Classification Using National Lake Monitoring Data"
+    authors:
+      - family-names: "Varghese Johnson"
+        given-names: "Joel"
     doi: 10.70124/htsbq-tkj76

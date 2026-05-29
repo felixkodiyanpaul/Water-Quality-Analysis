@@ -4,7 +4,49 @@ type: software
 title: "Water Quality Analysis Using National Lake Monitoring Data"
 version: 3.0.0
 date-released: 2026-05-28
-doi: 10.5281/zenodo.XXXXXXX
+doi: cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Water Quality Analysis Using National Lake Monitoring Data"
+version: 3.0.0
+date-released: 2026-05-28
+doi: doi: 10.5281/zenodo.20444106
+url: "https://github.com/felixkodiyanpaul/Water-Quality-Analysis"
+repository-code: "https://github.com/felixkodiyanpaul/Water-Quality-Analysis"
+license: MIT
+abstract: >
+  A FAIR Data Science experiment classifying Lithuanian lake water quality
+  using a Random Forest model. Data is loaded exclusively from the DBRepo
+  REST API and processed using standard ML pipelines.
+authors:
+  - family-names: "Varghese Johnson"
+    given-names: "Joel"
+    orcid: "https://orcid.org/0009-0007-0154-9707"
+    affiliation: "TU Wien"
+  - family-names: "Rajeevan"
+    given-names: "Anusree"
+    orcid: "https://orcid.org/0009-0006-9044-3017"
+    affiliation: "TU Wien"
+  - family-names: "Varughese Mathew"
+    given-names: "Ashwin"
+    orcid: "https://orcid.org/0009-0002-1797-1869"
+    affiliation: "TU Wien"
+  - family-names: "Kodiyan Paul"
+    given-names: "Felix Antony"
+    orcid: "https://orcid.org/0009-0001-2323-0517"
+    affiliation: "TU Wien"
+keywords:
+  - water quality
+  - lake monitoring
+  - machine learning
+  - random forest
+  - Lithuania
+  - FAIR data
+  - DBRepo
+references:
+  - type: dataset
+    title: "Generated Outputs – Water Quality Classification Using National Lake Monitoring Data"
+    doi: 10.70124/htsbq-tkj76
 url: "https://github.com/felixkodiyanpaul/Water-Quality-Analysis"
 repository-code: "https://github.com/felixkodiyanpaul/Water-Quality-Analysis"
 license: MIT

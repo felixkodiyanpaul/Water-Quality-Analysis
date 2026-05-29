@@ -1,6 +1,6 @@
 # Water Quality Analysis Using National Lake Monitoring Data
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20444106.svg)](https://doi.org/10.5281/zenodo.20444106)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20444106-blue)](https://doi.org/10.5281/zenodo.20444106)
 
 ## Abstract
 

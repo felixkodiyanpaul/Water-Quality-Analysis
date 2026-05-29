@@ -1,0 +1,8 @@
+/Users/joel/.local/pipx/venvs/rocrate/lib/python3.14/site-packages/rocrate/rocrate.py:289: UserWarning: 'https://test.dbrepo.tuwien.ac.at/database/13457a52-37f9-48d4-a078-6865e8d35981/table' looks like a data entity but it's not listed in the root dataset's hasPart
+  warnings.warn(f"'{id_}' looks like a data entity but it's not listed in the root dataset's hasPart")
+/Users/joel/.local/pipx/venvs/rocrate/lib/python3.14/site-packages/rocrate/rocrate.py:289: UserWarning: 'https://doi.org/10.70124/0c7z5-7vm19' looks like a data entity but it's not listed in the root dataset's hasPart
+  warnings.warn(f"'{id_}' looks like a data entity but it's not listed in the root dataset's hasPart")
+/Users/joel/.local/pipx/venvs/rocrate/lib/python3.14/site-packages/rocrate/rocrate.py:289: UserWarning: 'https://doi.org/10.70124/htsbq-tkj76' looks like a data entity but it's not listed in the root dataset's hasPart
+  warnings.warn(f"'{id_}' looks like a data entity but it's not listed in the root dataset's hasPart")
+RO-Crate loaded successfully!
+Entities found: 31

@@ -1,6 +1,6 @@
 # Water Quality Analysis Using National Lake Monitoring Data
 
-[![DOI](https://zenodo.org/badge/1229862090.svg)](https://doi.org/10.5281/zenodo.20432272)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20444106.svg)](https://doi.org/10.5281/zenodo.20444106)
 
 ## Abstract
 
@@ -27,8 +27,11 @@ This project analyses physicochemical water quality measurements from Lithuanian
 ```
 Water-Quality-Analysis/
 ├── data/                        # Raw and cleaned input data
-│   └── Lakes_Monitoring.csv     # Original dataset (source: data.europa.eu)
-├── notebooks/                   # Jupyter notebooks
+│   ├── Lakes_Monitoring.csv     # Original dataset (source: data.europa.eu)
+│   ├── schema.sql               # 3NF relational schema for DBRepo
+│   ├── raw/                     # Raw data files
+│   └── processed/               # Processed data files
+├── src/                         # Jupyter notebooks
 │   ├── T2_1_schema.ipynb        # DBRepo schema creation (Owner A)
 │   ├── T2_2_semantic_mapping.ipynb  # Ontology mapping (Owner B)
 │   ├── T2_3_unit_mapping.ipynb  # Unit of measurement mapping (Owner C)
@@ -39,16 +42,23 @@ Water-Quality-Analysis/
 ├── outputs/                     # Generated outputs
 │   ├── water_quality_model.pkl  # Trained Random Forest model
 │   ├── label_encoder.pkl        # Label encoder for target variable
-│   ├── confusion_matrix_csv.png # Confusion matrix (CSV version)
-│   └── confusion_matrix_api.png # Confusion matrix (API version)
+│   ├── confusion_matrix_api.png # Confusion matrix (API version)
+│   ├── evaluation_metrics.csv   # Model evaluation metrics
+│   └── predictions_api.csv      # Model predictions on test set
 ├── docs/                        # Documentation and metadata
-│   ├── model-card.md            # Model Card (Owner A)
+│   ├── T3_5_model card.md       # Model Card (Owner A)
 │   ├── T3_11_standards_overlap_analysis.md  # Standards analysis (Owner C)
-│   ├── unit_mapping_T2_3.md     # Unit mapping reference table
+│   ├── T4_5_DMP_comparison.md   # DMP comparison (Owner B)
+│   ├── maDMP_Water_Quality_Analysis.json    # Enriched maDMP JSON (Owner B)
+│   ├── DMP-FINAL_Water-Quality-Analysis-Using-National-Lake-Monitoring-Data.pdf  # Final DMP PDF
+│   ├── er_diagram.dbml          # ER diagram source file
+│   ├── er_diagram.png           # ER diagram image
 │   └── validation/              # RO-Crate validation output
 ├── ro-crate-metadata.json       # RO-Crate research object metadata
 ├── codemeta.json                # CodeMeta software metadata
-├── CITATION.cff                 # Citation metadata (added after T3.8)
+├── croissant.json               # Croissant dataset metadata
+├── fair4ml.json                 # FAIR4ML model metadata
+├── CITATION.cff                 # Citation metadata
 ├── LICENSE                      # MIT License (software)
 └── README.md                    # This file
 ```
@@ -63,7 +73,7 @@ The following naming convention is applied consistently across all project files
 |----------|-----------|---------|
 | **Input datasets** | `<DatasetName>_<Version>.csv` | `Lakes_Monitoring.csv` |
 | **Notebooks** | `<TaskID>_<description>.ipynb` | `T2_3_unit_mapping.ipynb` |
-| **Output figures** | `<figure_type>_<version>.png` | `confusion_matrix_csv.png` |
+| **Output figures** | `<figure_type>_<version>.png` | `confusion_matrix_api.png` |
 | **Model artefacts** | `<model_name>_model.pkl` | `water_quality_model.pkl` |
 | **Config/metadata** | lowercase with underscores | `ro-crate-metadata.json` |
 | **Documentation** | `<TaskID>_<description>.md` | `T3_11_standards_overlap_analysis.md` |
@@ -120,7 +130,7 @@ This is the fully FAIR-compliant version. No local data files needed.
 
 **Step 1** — Ensure you have a DBRepo account at `https://test.dbrepo.tuwien.ac.at`
 
-**Step 2** — Open `notebooks/T2_6_dbrepo_api_version.ipynb` in Jupyter or VS Code
+**Step 2** — Open `src/T2_6_dbrepo_api_version.ipynb` in Jupyter or VS Code
 
 **Step 3** — Run Cell 0 (install libraries)
 
@@ -136,7 +146,7 @@ This is the fully FAIR-compliant version. No local data files needed.
 
 **Step 1** — Place `Lakes_Monitoring.csv` in the `data/` folder
 
-**Step 2** — Open `notebooks/experiment_csv_version.ipynb`
+**Step 2** — Open `src/experiment_csv_version.ipynb`
 
 **Step 3** — Update the CSV path in Cell 3 if needed:
 ```python
@@ -156,7 +166,7 @@ df = pd.read_csv("data/Lakes_Monitoring.csv")
 | Recall (weighted) | 0.9190 |
 | F1 Score (weighted) | 0.9106 |
 
-Both Option A and Option B produce identical results (verified in T2.6 Cell 8).
+Both Option A and Option B produce identical results (verified).
 
 ---
 
@@ -200,8 +210,9 @@ Both Option A and Option B produce identical results (verified in T2.6 Cell 8).
 |------|-------------|
 | `outputs/water_quality_model.pkl` | Trained Random Forest classifier |
 | `outputs/label_encoder.pkl` | Sklearn LabelEncoder for target classes |
-| `outputs/confusion_matrix_csv.png` | Confusion matrix from CSV version |
 | `outputs/confusion_matrix_api.png` | Confusion matrix from DBRepo API version |
+| `outputs/evaluation_metrics.csv` | Model evaluation metrics (accuracy, precision, recall, F1) |
+| `outputs/predictions_api.csv` | Model predictions on the test set |
 
 ---
 
@@ -260,7 +271,7 @@ If you use this work, please cite it as:
 
 > Rajeevan, A., Johnson, J.V., Kodiyan Paul, F.A., Varughese Mathew, A. (2026). *Water Quality Analysis Using National Lake Monitoring Data*. Zenodo. https://doi.org/10.5281/zenodo.20444106
 
-[![DOI](https://zenodo.org/badge/1229862090.svg)](https://doi.org/10.5281/zenodo.20444106)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20444106.svg)](https://doi.org/10.5281/zenodo.20444106)
 
 ---
 
@@ -272,3 +283,6 @@ If you use this work, please cite it as:
 | TU Wien Research Data Repository | https://test.researchdata.tuwien.ac.at |
 | Original Dataset | https://data.europa.eu |
 | DaSt-2026-final Community | https://test.researchdata.tuwien.ac.at/communities/dast-2026-final |
+| Model Deposit (T3.9) | https://doi.org/10.70124/0c7z5-7vm19 |
+| Generated Outputs Deposit (T3.10) | https://doi.org/10.70124/htsbq-tkj76 |
+| Final DMP Deposit (T4.4) | https://doi.org/10.70124/w1hb2-8t732 |
